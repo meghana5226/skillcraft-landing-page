@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #121212;
+    color: #fff;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  header.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00f0ff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #00f0ff;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: #00f0ff;
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cta:hover {
+    background: #00c8d7;
+  }
+  
+  section {
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  
+  footer {
+    background: #1a1a1a;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: #00f0ff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #1a1a1a;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+  
